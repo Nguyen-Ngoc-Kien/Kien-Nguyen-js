@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai8.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img id="slideshow" src="./assets/anh-phong-canh-1-1.jpg" alt="Ảnh phong cảnh" width="500px">
+        </div>
+        <div class="arrow-left" id="prevBtn"> < </div>
+        <div class="arrow-right" id="nextBtn"> > </div>
+    </div>
+
+    <script>
+        const images = [
+            './assets/anh-phong-canh-1-1.jpg',
+            './assets/anh-phong-canh-3-1.jpg',
+            './assets/anh-phong-canh-4-1.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        const slideshowImage = document.getElementById('slideshow');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        nextBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            slideshowImage.src = images[currentIndex];
+        });
+
+        prevBtn.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; 
+            slideshowImage.src = images[currentIndex];
+        });
+    </script>
+</body>
+</html>

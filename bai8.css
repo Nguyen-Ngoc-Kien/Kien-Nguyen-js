@@ -1,0 +1,49 @@
+.container{
+    margin: 10px auto;
+    width: 600px;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.img{
+    width: 600px;
+    height: 700px;
+}
+
+.arrow-left {
+    font-size: 50px;
+    background: #e2bbbb7d;
+    color: #733636;
+    padding-left: 11px;
+    padding-top: 19px;
+    width: 46px;
+    position: absolute;
+    top: 40%;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.arrow-right {
+    font-size: 50px;
+    background: #e2bbbb7d;
+    color: #733636;
+    padding-left: 11px;
+    padding-top: 19px;
+    width: 46px;
+    position: absolute;
+    top: 40%;
+    right:0;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 700;
+}

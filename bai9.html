@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Swap</title>
+    <link rel="stylesheet" href="bai9.css">
+</head>
+<body>
+    <div class="container">
+        <div class="img-1">
+            <img id="main-image" src="./assets/anh-phong-canh-1-1.jpg" alt="">
+        </div>
+        <div class="slide-img">
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-3-1.jpg" alt="">
+            </div>
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-4-1.jpg" alt="">
+            </div>
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-5-1.jpg" alt="">
+            </div>
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-6-1.jpg" alt="">
+            </div>
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-7-1.jpg" alt="">
+            </div>
+            <div class="img-2">
+                <img src="./assets/anh-phong-canh-9-1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const mainImage = document.getElementById('main-image');
+        
+        const img2Images = document.querySelectorAll('.img-2 img');
+        
+        img2Images.forEach(image => {
+            image.addEventListener('click', () => {
+                mainImage.src = image.src;
+            });
+        });
+    </script>
+</body>
+</html>

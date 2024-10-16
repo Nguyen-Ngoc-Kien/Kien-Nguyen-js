@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <button>Change</button>
+    </div>
+    <script>
+        const liNodeList = document.getElementsByTagName('li');
+        const ulNodeList = document.querySelector('ul');
+        const buttonNode = document.querySelector('button');
+        buttonNode.addEventListener('click', function(){
+            const items = Array.from(ulNodeList.children);
+            const reversedItems = items.reverse();
+
+            ulNodeList.innerHTML = '';
+
+            reversedItems.forEach(item => {
+                ulNodeList.appendChild(item);
+            });
+        })
+    </script>
+</body>
+</html>

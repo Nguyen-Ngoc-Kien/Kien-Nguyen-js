@@ -1,0 +1,84 @@
+.container {
+    margin: auto;
+    width: 500px;
+    padding-top: 4px;
+    padding-bottom: 19px;
+    border: 2px solid #4d685b;
+    border-radius: 9px;
+}
+
+p.signup {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+p.text-warning {
+    text-align: center;
+    color: red;
+    font-size: 17px;
+    margin-top: -5px;
+    margin-bottom: -3px;
+}
+
+button.submit {
+    margin: 11px auto;
+    display: block;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    background: #7169b7;
+    color: white;
+    cursor: pointer;
+}
+
+.input-form.email {
+    margin-left: -26px;
+}
+
+.input-form.password {
+    margin-left: -4px;
+}
+
+.input-form.username {
+    margin-left: -3px;
+}
+
+.input-form.fullname {
+    margin-left: -1px;
+}
+
+.input-form.email input {
+    margin-left: 49px;
+}
+
+
+.input-form.password input {
+    margin-left: 5px;
+}
+
+.input-form.email{
+    gap:1px;
+}
+
+.input-form.email p {
+    margin-left: 29px;
+}
+
+p.text {
+    font-size: 19px;
+    font-weight: 550;
+}
+
+input {
+    border: 2px solid #5d6e5d;
+    border-radius: 3px;
+    height: 23px;
+}

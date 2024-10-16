@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai7.css">
+</head>
+<body>
+    <div class="container">
+        <p class="signup">Signup</p>
+        <form id="signupForm" action="">
+            <div class="input-form username">
+                <p class="text">Username</p>
+                <input id="username" type="text"/>
+            </div>
+            <p class="text-warning" id="usernameError"></p>
+            <div class="input-form password">
+                <p class="text">Password</p>
+                <input id="password" type="password"/>
+            </div>
+
+            <p class="text-warning" id="passwordError"></p>
+
+            <div class="input-form email">
+                <p class="text">Email</p>
+                <input id="email" type="text"/>
+            </div>
+            <p class="text-warning" id="emailError"></p>
+
+            <div class="input-form fullname">
+                <p class="text">FullName</p>
+                <input id="fullname" type="text"/>
+            </div>
+            <p class="text-warning" id="fullnameError"></p>
+
+            <button class="submit" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            document.getElementById('usernameError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('fullnameError').innerText = '';
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const email = document.getElementById('email').value;
+            const fullname = document.getElementById('fullname').value;
+
+            let isValid = true;
+
+            if (username.length == 0) {
+                document.getElementById('usernameError').innerText = 'Vui Lòng điền vào trường này';
+                isValid = false;
+            }
+
+            else if (username.length < 5 || username.length > 10) {
+                document.getElementById('usernameError').innerText = 'Username phải có độ dài từ 5 đến 10 ký tự';
+                isValid = false;
+            }
+
+
+            if (password.length == 0) {
+                document.getElementById('passwordError').innerText = 'Vui Lòng điền vào trường này';
+                isValid = false;
+            }
+
+            else if (password.length < 5 || password.length > 10) {
+                document.getElementById('passwordError').innerText = 'Password phải có độ dài từ 5 đến 10 ký tự';
+                isValid = false;
+            }
+
+            const emailRegex = /\S+@\S+/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerText = 'Email không hợp lệ';
+                isValid = false;
+            }
+
+            if (fullname.trim() === '') {
+                document.getElementById('fullnameError').innerText = 'Vui lòng điền vào trường này';
+                isValid = false;
+            }
+
+            if (isValid) {
+                console.log('Form is valid');
+                document.getElementById('signupForm').submit();
+            }
+        });
+    </script>
+</body>
+</html>
